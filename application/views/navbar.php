@@ -6,13 +6,14 @@
         <ul class="nav navbar-nav">
 
             <li><a href="<?php echo base_url();?>">Home</a></li>
+
             <li class="dropdown">
-                <a class="dropdown-toggle" data-toggle="dropdown" href="<?php echo base_url()."form/view_kpi";?>">KPI
+                <a class="dropdown-toggle" data-toggle="dropdown" href="<?php echo base_url()."form/view_kpi";?>">News
                     <span class="caret"></span></a>
                 <ul class="dropdown-menu">
-                    <li><a href="<?php echo base_url()."form/view_kpi";?>">View KPIs</a></li>
-                    <li><a href="<?php echo base_url()."form/add_kpi";?>">Add KPI</a></li>
-                    <li><a href="<?php echo base_url()."form/add_kpi_category";?>">Add Category</a></li>
+                    <li><a href="<?php echo base_url()."news/view_kpi";?>">View KPIs</a></li>
+                    <li><a href="<?php echo base_url()."news/add_kpi";?>">Add KPI</a></li>
+                    <li><a href="<?php echo base_url()."news/add_kpi_category";?>">Add Category</a></li>
                 </ul>
             </li>
 

@@ -14,9 +14,44 @@ class News extends CI_Controller {
     public function index()
     {
 
-        $this->register_user();
+        $this->login();
 
 
+    }
+
+    public function login(){
+
+
+        //Check if form is submitted
+        if ($_SERVER["REQUEST_METHOD"] == "POST") {
+            //Form validation
+            $this->form_validation->set_rules('email', 'Password', 'required|valid_email|max_length[150]');
+            $this->form_validation->set_rules('password', 'Password', 'required');
+            if ($this->form_validation->run() != FALSE){
+                $db_data = array();
+                $db_data['email'] = $this->input->post('email', TRUE);
+                $db_data['password'] = md5($this->input->post('password', TRUE));
+                $db_data['is_active'] = 1;
+
+                $res = $this->News_model->auth_user($db_data);
+                if($res->result_id->num_rows == 1){
+                    $res = $res->result();
+                    $this->session->set_userdata('user_id',$res[0]->user_id);
+                    redirect("news/register_user");
+                }else{
+                    $this->session->set_flashdata('error', 'Invalid Email or Password');
+                    redirect('news/login');
+                }
+            }
+            $this->session->set_flashdata('error', validation_errors());
+            redirect('news/login');
+        }
+
+
+        //Show login form
+        $data = array();
+        $data['title'] = 'Login';
+        $this->load->view('news_portal/login');
     }
 
     public function register_user(){
@@ -89,8 +124,8 @@ class News extends CI_Controller {
         $mail->SMTPSecure = "ssl";  // prefix for secure protocol to connect to the server
         $mail->Host       = "smtp.gmail.com";      // setting GMail as our SMTP server
         $mail->Port       = 465;                   // SMTP port to connect to GMail
-        $mail->Username   = "**************";  // user email address
-        $mail->Password   = "**************";            // password in GMail
+        $mail->Username   = "******************";  // user email address
+        $mail->Password   = "*************";            // password in GMail
         $mail->SetFrom('mail@Newsportal.com', 'News Portal');  //Who is sending the email
 
         $mail->Subject    = $subject;
@@ -127,6 +162,8 @@ class News extends CI_Controller {
 
                     if ($this->News_model->set_password($id,$password,$key)) {
                         $this->session->set_flashdata('message', 'Password set successfully');
+
+                        $this->session->set_userdata('user_id',$id);
                         redirect('');
                     }
 
@@ -139,6 +176,11 @@ class News extends CI_Controller {
             }
         }
 
+    }
+
+    public function logout(){
+        $this->session->sess_destroy();
+        redirect("");
     }
 
 

@@ -7,9 +7,11 @@ class News_model extends CI_Model {
     }
 
     public function register_user($data){
+
         $this->db->trans_start();
 
-        //Insert data into users table
+        //Escape and Insert data into users table
+        $this->db->escape($data);
         $this->db->insert("users",$data);
 
         //Get user_id of last inserted user
@@ -18,10 +20,82 @@ class News_model extends CI_Model {
         //Setting values to insert into confirm table
         $this->db->set('user_id', $user_id);
         $this->db->set('email', $data['email']);
-        $this->db->set('key', md5($user_id . $data['name'] . $data['email'] . date('mY') )); //Randomly genereted key
+        $this->db->set('key', md5($user_id . $data['full_name'] . $data['email'] . date('mY') )); //Randomly generated key
         $this->db->insert('confirm');
 
         $this->db->trans_complete();
+
+        $return_data = array();
+        $return_data['name'] = $data['full_name'];
+        $return_data['user_id'] = $user_id;
+        $return_data['email'] = $data['email'];
+        $return_data['key'] = md5($user_id . $data['full_name'] . $data['email'] . date('mY') );
+
+        return $return_data;
+
+    }
+
+    public function verify_user($id,$key){
+        //Check if id with key exists in confirm database
+        $this->db->from('confirm');
+        $this->db->where('user_id', $id);
+        $this->db->where('key', $key);
+        $this->db->limit(1);
+        $query = $this->db->get();
+        if ($query->num_rows() >= 1){
+
+            //User with id and key found
+            $this->db->trans_start();
+
+            //Set user as active
+            $is_active = '1';
+            $update = array (
+                'is_active'  => $is_active
+            );
+            $this->db->where('id', $id);
+            $this->db->update("users",$update);
+
+            //Also delete entry from confirm table
+            $this->db->where('user_id', $id);
+            $this->db->delete('confirm');
+
+            $this->db->trans_complete();
+
+        }
+        else{
+
+        }
+
+    }
+
+    public function set_password($id,$password,$key){
+
+        //Check if id with key exists in confirm database
+        $this->db->from('confirm');
+        $this->db->where('user_id', $id);
+        $this->db->where('key', $key);
+        $this->db->limit(1);
+        $query = $this->db->get();
+        if ($query->num_rows() >= 1){
+            //User with id and key found
+            $this->db->trans_start();
+            $is_active = '1';
+            $update = array (
+                'is_active'  => $is_active,
+                'password' => $password
+            );
+        }
+
+        $this->db->where('id',$id);
+        $this->db->update('users',$update);
+
+        //Also delete entry from confirm table
+        $this->db->where('user_id', $id);
+        $this->db->delete('confirm');
+
+        $this->db->trans_complete(); //end of transaction
+
+        return true;
     }
 
 

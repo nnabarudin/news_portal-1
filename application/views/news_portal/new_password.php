@@ -5,7 +5,7 @@
 
             <div class="panel panel-default">
                 <div class="panel-heading">
-                    <h3 class="panel-title">Register User</h3>
+                    <h3 class="panel-title">Set Password</h3>
                 </div>
                 <div class="panel-body">
 
@@ -31,19 +31,19 @@
                     }
                     ?>
 
-                    <?php echo form_open('',array('name' => 'register_user','id' => 'register_user')); ?>
+                    <?php echo form_open('',array('name' => 'set_password','id' => 'set_password')); ?>
 
                     <div class="form-group">
-                        <label>Full Name</label>
-                        <input type="text" class="form-control" id="name" name="name" placeholder="Enter Full Name" required>
+                        <label>Password</label>
+                        <input type="password" class="form-control" id="password" name="password" placeholder="Enter Password" required>
                     </div>
 
                     <div class="form-group">
-                        <label>Enter Email</label>
-                        <input type="email" class="form-control" id="email" name="email" placeholder="Enter Email Address" required>
+                        <label>Confirm Password</label>
+                        <input type="password" class="form-control" id="conf_pass" name="conf_pass" placeholder="Confirm Password" required>
                     </div>
 
-                    <button type="submit" name="btn_submit"  class="btn btn-primary pull-right">Register</button>
+                    <button type="submit" name="btn_submit"  class="btn btn-primary pull-right">Submit</button>
                     <?php echo form_close(); ?>
 
                 </div>

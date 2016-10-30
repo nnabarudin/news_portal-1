@@ -53,3 +53,5 @@ $route['default_controller'] = 'news';
 $route['404_override'] = '';
 $route['translate_uri_dashes'] = FALSE;
 
+
+$route['verify'] = 'news/verify';

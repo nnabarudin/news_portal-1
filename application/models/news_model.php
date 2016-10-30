@@ -6,6 +6,10 @@ class News_model extends CI_Model {
         parent::__construct();
     }
 
+    public function auth_user($db_data){
+        return $this->db->get_where('users',$db_data,1);
+    }
+
     public function register_user($data){
 
         $this->db->trans_start();
@@ -96,6 +100,19 @@ class News_model extends CI_Model {
         $this->db->trans_complete(); //end of transaction
 
         return true;
+    }
+
+    public function publish_article($db_data){
+        $this->db->insert("news",$db_data);
+        return true;
+    }
+
+    public function get_articles($id){
+        $this->db->from('news');
+        $this->db->where('published_by',$id);
+        $articles = $this->db->get();
+
+        return $articles ;
     }
 
 

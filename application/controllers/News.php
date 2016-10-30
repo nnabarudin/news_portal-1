@@ -8,6 +8,8 @@ class News extends CI_Controller {
         parent::__construct();
         $this->load->model('News_model');
         $this->load->library('My_PHPMailer');
+        $this->load->helper('general_helper');
+        $this->load->library('session');
 
     }
 
@@ -36,7 +38,7 @@ class News extends CI_Controller {
                 $res = $this->News_model->auth_user($db_data);
                 if($res->result_id->num_rows == 1){
                     $res = $res->result();
-                    $this->session->set_userdata('user_id',$res[0]->user_id);
+                    $this->session->set_userdata('user_id',$res[0]->id);
                     redirect("news/register_user");
                 }else{
                     $this->session->set_flashdata('error', 'Invalid Email or Password');
@@ -124,8 +126,8 @@ class News extends CI_Controller {
         $mail->SMTPSecure = "ssl";  // prefix for secure protocol to connect to the server
         $mail->Host       = "smtp.gmail.com";      // setting GMail as our SMTP server
         $mail->Port       = 465;                   // SMTP port to connect to GMail
-        $mail->Username   = "******************";  // user email address
-        $mail->Password   = "*************";            // password in GMail
+        $mail->Username   = "*****";  // user email address
+        $mail->Password   = "***";            // password in GMail
         $mail->SetFrom('mail@Newsportal.com', 'News Portal');  //Who is sending the email
 
         $mail->Subject    = $subject;
@@ -181,6 +183,69 @@ class News extends CI_Controller {
     public function logout(){
         $this->session->sess_destroy();
         redirect("");
+    }
+
+    public function publish_article(){
+        if(!is_user_loggedin()){
+            $this->session->sess_destroy();
+        };
+
+        //Check if form is submitted
+        if ($_SERVER["REQUEST_METHOD"] == "POST") {
+            //Form validation
+            $this->form_validation->set_rules('title', 'Title', 'required');
+
+
+            if ($this->form_validation->run() != FALSE){
+                $db_data = array();
+                $db_data['title'] = $this->input->post('title', TRUE);
+                $db_data['news_text'] = $this->input->post('news_text', TRUE);
+                $db_data['published_by'] = $this->session->user_id;
+                $db_data['created_dtm'] = date("Y-m-d H:i:s");
+
+                //Configuration for image
+                $config = array();
+                $config['upload_path']          = './uploads/';
+                $config['allowed_types']        = 'gif|jpg|png|jpeg';
+                $config['max_size']             = 2048; //2MiB
+                $config['encrypt_name']         = TRUE;
+
+                $this->load->library('upload', $config);
+
+
+                if ( ! $this->upload->do_upload('fileToUpload')){
+                    $this->session->set_flashdata('error', 'Error Uploading file');
+                    redirect("news/publish_article");
+                }else{
+                    $upload_data = $this->upload->data();
+                    $db_data['image'] = $upload_data['file_name'];
+                    unset($upload_data);
+                }
+                if($this->News_model->publish_article($db_data)){
+                    $this->session->set_flashdata('message', 'Article Published');
+                    redirect("news/publish_article");
+                }
+
+            }else{
+                $this->session->set_flashdata('error', validation_errors());
+                redirect('news/publish_article');
+            }
+        }
+        //Show publish article form
+        $data = array();
+        $data['title'] = "Publish Article";
+        $this->load->view('news_portal/publish_article',$data);
+    }
+
+    public function show_articles(){
+        if(!is_user_loggedin()){
+            $this->session->sess_destroy();
+        };
+
+        $data = array();
+        $data['articles'] = $this->News_model->get_articles($this->session->user_id);
+        $data['title'] = "Show Articles";
+        $this->load->view('news_portal/show_articles',$data);
     }
 
 

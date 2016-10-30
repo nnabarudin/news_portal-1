@@ -11,7 +11,9 @@
 
     <!-- Select2 -->
     <link href="<?php echo base_url();?>plugins/select2/css/select2.min.css" rel="stylesheet">
-    
+
+    <!-- Bootstrap-wysihtml5 -->
+    <link href="<?php echo base_url();?>plugins/bootstrap-wysihtml5/bootstrap-wysihtml5-0.0.2.css" rel="stylesheet">
 
     <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
     <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->

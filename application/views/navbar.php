@@ -6,34 +6,19 @@
         <ul class="nav navbar-nav">
 
             <li><a href="<?php echo base_url();?>">Home</a></li>
+            <li><a href="<?php echo base_url()."news/register_user";?>">Register</a></li>
+            <li><a href="<?php echo base_url()."news/login";?>">Login</a></li>
+            <?php
+            if (is_user_loggedin() == true){
+                //Show these menus if user is logged in
+                ?>
+                <li><a href="<?php echo base_url()."news/publish_article";?>">Publish Articles</a></li>
+                <li><a href="<?php echo base_url()."news/show_articles";?>">Show Articles</a></li>
+                <li><a href="<?php echo base_url()."news/logout";?>">Logout</a></li>
+            <?php
+            }
+            ?>
 
-            <li class="dropdown">
-                <a class="dropdown-toggle" data-toggle="dropdown" href="<?php echo base_url()."form/view_kpi";?>">News
-                    <span class="caret"></span></a>
-                <ul class="dropdown-menu">
-                    <li><a href="<?php echo base_url()."news/view_kpi";?>">View KPIs</a></li>
-                    <li><a href="<?php echo base_url()."news/add_kpi";?>">Add KPI</a></li>
-                    <li><a href="<?php echo base_url()."news/add_kpi_category";?>">Add Category</a></li>
-                </ul>
-            </li>
-
-            <li class="dropdown">
-                <a class="dropdown-toggle" data-toggle="dropdown" href="<?php echo base_url()."form/view_kra";?>">KRA
-                    <span class="caret"></span></a>
-                <ul class="dropdown-menu">
-                    <li><a href="<?php echo base_url()."form/view_kra/";?>">View KRAs</a></li>
-                    <li><a href="<?php echo base_url()."form/add_kra";?>">Add KRA</a></li>
-                </ul>
-            </li>
-
-            <li class="dropdown">
-                <a class="dropdown-toggle" data-toggle="dropdown" href="<?php echo base_url()."form/view_employee";?>">Employee
-                    <span class="caret"></span></a>
-                <ul class="dropdown-menu">
-                    <li><a href="<?php echo base_url()."form/view_employee/";?>">View Employees</a></li>
-                    <li><a href="<?php echo base_url()."form/add_employee";?>">Add Employee</a></li>
-                </ul>
-            </li>
         </ul>
 
     </div>

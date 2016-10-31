@@ -313,7 +313,18 @@ class News extends CI_Controller {
         $this->load->view('news_portal/news_stand',$data);
     }
 
-  
+    public function rss(){
+        $this->load->helper('xml');
+        $data['encoding'] = 'utf-8';
+        $data['feed_name'] = 'newsportal.dev';
+        $data['feed_url'] = 'http://newsportal.dev';
+        $data['page_description'] = 'News Portal designed by Umair Qamar (umairqamar@live.com)';
+        $data['page_language'] = 'en-us';
+        $data['creator_email'] = 'umairqamar@live.com';
+        $data['posts'] = $this->News_model->get_all_articles();
+        header("Content-Type: application/rss+xml");
+        $this->load->view('news_portal/rss', $data);
+    }
 
 
 

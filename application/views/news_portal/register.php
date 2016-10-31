@@ -1,8 +1,7 @@
 <?php include(VIEWPATH."_header.php") ?>
 <div class="container-fluid">
     <div class="row">
-        <div class="col-md-12 " >
-
+        <div class="col-md-8 col-md-offset-2 " >
             <div class="panel panel-default">
                 <div class="panel-heading">
                     <h3 class="panel-title">Register User</h3>
@@ -32,7 +31,6 @@
                     ?>
 
                     <?php echo form_open('',array('name' => 'register_user','id' => 'register_user')); ?>
-
                     <div class="form-group">
                         <label>Full Name</label>
                         <input type="text" class="form-control" id="name" name="name" placeholder="Enter Full Name" required>
@@ -45,10 +43,8 @@
 
                     <button type="submit" name="btn_submit"  class="btn btn-primary pull-right">Register</button>
                     <?php echo form_close(); ?>
-
                 </div>
             </div>
-
         </div>
 
 

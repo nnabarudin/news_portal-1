@@ -15,8 +15,16 @@
     <!-- bootstrap wysihtml5 - text editor -->
     <link rel="stylesheet" href="<?php echo base_url();?>plugins/bootstrap-wysihtml5/bootstrap3-wysihtml5.min.css">
 
-    <!--KendoUI-->
-    <!--KendoUI-->
+    <!-- Sweet Alert -->
+    <link rel="stylesheet" href="<?php echo base_url();?>plugins/sweet-alert/sweetalert.css">
+
+    <!-- Pace Page -->
+    <link rel="stylesheet" href="<?php echo base_url();?>plugins/pace/pace.min.css">
+
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="<?php echo base_url();?>plugins/font-awesome/css/font-awesome.min.css">
+
+    <!--KendoUI for PDF-->
     <link href="<?php echo base_url();?>plugins/kendo-ui/styles/kendo.common.min.css" rel="stylesheet">
     <link href="<?php echo base_url();?>plugins/kendo-ui/styles/kendo.rtl.min.css" rel="stylesheet">
     <link href="<?php echo base_url();?>plugins/kendo-ui/styles/kendo.default.min.css" rel="stylesheet">

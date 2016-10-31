@@ -173,6 +173,7 @@ class News_model extends CI_Model {
     public function get_all_articles(){
         $this->db->from('news');
         $this->db->order_by("created_dtm", "desc"); //Chronological order
+        $this->db->limit(10);
         $articles = $this->db->get();
         return $articles ;
     }

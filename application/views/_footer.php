@@ -9,6 +9,13 @@
 <script src="<?php echo base_url();?>plugins/select2/js/select2.min.js"></script>
 <!-- Bootstrap WYSIHTML5 -->
 <script src="<?php echo base_url();?>plugins/bootstrap-wysihtml5/bootstrap3-wysihtml5.all.min.js"></script>
+<!-- SweetAlert -->
+<script src="<?php echo base_url();?>plugins/sweet-alert/sweetalert.min.js"></script>
+<!-- Pace Page -->
+<script src="<?php echo base_url();?>plugins/pace/pace.min.js"></script>
+<!-- Bootstrap Validator -->
+<script src="<?php echo base_url();?>plugins/bootstrap-validator/validator.min.js"></script>
+
 <script>
     $(document).ready(function() {
         $('#news-textarea').wysihtml5();

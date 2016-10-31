@@ -7,7 +7,6 @@ class News extends CI_Controller {
     {
         parent::__construct();
         $this->load->model('News_model');
-        $this->load->library('My_PHPMailer');
         $this->load->helper('general_helper');
         $this->load->library('session');
 
@@ -119,15 +118,17 @@ class News extends CI_Controller {
     }
 
     public function send_mail($email,$message,$subject) {
+        $this->load->library('My_PHPMailer');
+        $this->config->load('php_mailer');
         $mail = new PHPMailer();
         $mail->IsHTML(true);
         $mail->IsSMTP(); // we are going to use SMTP
         $mail->SMTPAuth   = true; // enabled SMTP authentication
         $mail->SMTPSecure = "ssl";  // prefix for secure protocol to connect to the server
-        $mail->Host       = "smtp.gmail.com";      // setting GMail as our SMTP server
-        $mail->Port       = 465;                   // SMTP port to connect to GMail
-        $mail->Username   = "*****";  // user email address
-        $mail->Password   = "***";            // password in GMail
+        $mail->Host       = $this->config->item('host');
+        $mail->Port       = $this->config->item('port');
+        $mail->Username   = $this->config->item('username');
+        $mail->Password   = $this->config->item('password');;
         $mail->SetFrom('mail@Newsportal.com', 'News Portal');  //Who is sending the email
 
         $mail->Subject    = $subject;

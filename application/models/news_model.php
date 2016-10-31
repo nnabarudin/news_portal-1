@@ -115,6 +115,15 @@ class News_model extends CI_Model {
         return $articles ;
     }
 
+    public function get_username($id){
+        $this->db->select('full_name');
+        $this->db->where("id",$id);
+        $this->db->from('users');
+        $this->db->limit(1);
+        $username = $this->db->get()->result();
+
+        return $username = $username[0];
+    }
 
 }
 

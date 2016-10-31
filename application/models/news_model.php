@@ -167,13 +167,7 @@ class News_model extends CI_Model {
         }else{
             $this->db->trans_complete(); //end of transaction
             return true;
-            echo "FILE DOES NOT EXIST";exit;
-
         }
-
-
-
-
     }
 
 }

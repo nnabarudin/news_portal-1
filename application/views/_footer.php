@@ -4,7 +4,5 @@
 <!-- SweetAlert -->
 <script src="<?php echo base_url();?>plugins/sweet-alert/sweetalert.min.js"></script>
 
-
-
 </body>
 </html>

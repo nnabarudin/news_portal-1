@@ -2,12 +2,11 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="1145e9b0-f6d6-4ec3-812d-5716a00bd733" name="Default" comment="">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/application/controllers/News.php" afterPath="$PROJECT_DIR$/application/controllers/News.php" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/favicon.PNG" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/news_portal.sql" afterPath="" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/application/views/_footer.php" afterPath="$PROJECT_DIR$/application/views/_footer.php" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/application/views/_header.php" afterPath="$PROJECT_DIR$/application/views/_header.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/application/views/news_portal/login.php" afterPath="$PROJECT_DIR$/application/views/news_portal/login.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/application/views/news_portal/publish_article.php" afterPath="$PROJECT_DIR$/application/views/news_portal/publish_article.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/application/views/news_portal/register.php" afterPath="$PROJECT_DIR$/application/views/news_portal/register.php" />
     </list>
     <ignored path="news_portal.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -41,6 +40,16 @@
           </provider>
         </entry>
       </file>
+      <file leaf-file-name="general_helper.php" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/application/helpers/general_helper.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="1887">
+              <caret line="111" column="45" selection-start-line="111" selection-start-column="45" selection-end-line="111" selection-end-column="45" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
       <file leaf-file-name="News_model.php" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/application/models/News_model.php">
           <provider selected="true" editor-type-id="text-editor">
@@ -51,11 +60,31 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="publish_article.php" pinned="false" current-in-tab="true">
+      <file leaf-file-name="publish_article.php" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/application/views/news_portal/publish_article.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="561">
+            <state relative-caret-position="-51">
               <caret line="33" column="108" selection-start-line="33" selection-start-column="108" selection-end-line="33" selection-end-column="108" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="_header.php" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/application/views/_header.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="170">
+              <caret line="10" column="0" selection-start-line="10" selection-start-column="0" selection-end-line="10" selection-end-column="0" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="_footer.php" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/application/views/_footer.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="85">
+              <caret line="5" column="0" selection-start-line="5" selection-start-column="0" selection-end-line="5" selection-end-column="0" />
               <folding />
             </state>
           </provider>
@@ -102,13 +131,13 @@
         <option value="$PROJECT_DIR$/application/views/news_portal/rss.php" />
         <option value="$PROJECT_DIR$/application/views/news_portal/news_stand.php" />
         <option value="$PROJECT_DIR$/application/views/navbar.php" />
-        <option value="$PROJECT_DIR$/application/views/_header.php" />
-        <option value="$PROJECT_DIR$/application/views/_footer.php" />
         <option value="$PROJECT_DIR$/application/controllers/News.php" />
         <option value="$PROJECT_DIR$/application/views/news_portal/register.php" />
         <option value="$PROJECT_DIR$/application/views/news_portal/login.php" />
         <option value="$PROJECT_DIR$/application/models/News_model.php" />
         <option value="$PROJECT_DIR$/application/views/news_portal/publish_article.php" />
+        <option value="$PROJECT_DIR$/application/views/_header.php" />
+        <option value="$PROJECT_DIR$/application/views/_footer.php" />
       </list>
     </option>
   </component>
@@ -388,12 +417,12 @@
       <workItem from="1477764795110" duration="4088000" />
       <workItem from="1477813083715" duration="29551000" />
       <workItem from="1477893860016" duration="83000" />
-      <workItem from="1477894073224" duration="27479000" />
+      <workItem from="1477894073224" duration="28936000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="62909000" />
+    <option name="totallyTimeSpent" value="64366000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1296" height="1000" extended-state="6" />
@@ -747,14 +776,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/application/helpers/general_helper.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1510">
-          <caret line="111" column="45" selection-start-line="111" selection-start-column="45" selection-end-line="111" selection-end-column="45" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/application/helpers/tcpdf/config/tcpdf_config.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
@@ -795,22 +816,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/application/views/_header.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="323">
-          <caret line="19" column="0" selection-start-line="19" selection-start-column="0" selection-end-line="19" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/application/views/_footer.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="102">
-          <caret line="6" column="0" selection-start-line="6" selection-start-column="0" selection-end-line="6" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/application/views/navbar.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="136">
@@ -825,17 +830,6 @@
           <caret line="32" column="118" selection-start-line="32" selection-start-column="89" selection-end-line="32" selection-end-column="118" />
           <folding>
             <marker date="1477933783642" expanded="true" signature="2517:2524" ph="..." />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/application/controllers/News.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1462">
-          <caret line="86" column="70" selection-start-line="86" selection-start-column="64" selection-end-line="86" selection-end-column="70" />
-          <folding>
-            <element signature="n#publish_article#0;n#News#0;n#!!top" expanded="false" />
-            <marker date="1477933783583" expanded="true" signature="3374:3549" ph="..." />
           </folding>
         </state>
       </provider>
@@ -858,8 +852,43 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/application/views/news_portal/publish_article.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="561">
+        <state relative-caret-position="-51">
           <caret line="33" column="108" selection-start-line="33" selection-start-column="108" selection-end-line="33" selection-end-column="108" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/application/views/_header.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="170">
+          <caret line="10" column="0" selection-start-line="10" selection-start-column="0" selection-end-line="10" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/application/views/_footer.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="85">
+          <caret line="5" column="0" selection-start-line="5" selection-start-column="0" selection-end-line="5" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/application/controllers/News.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1462">
+          <caret line="86" column="70" selection-start-line="86" selection-start-column="64" selection-end-line="86" selection-end-column="70" />
+          <folding>
+            <element signature="n#publish_article#0;n#News#0;n#!!top" expanded="false" />
+            <marker date="1477933783583" expanded="true" signature="3374:3549" ph="..." />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/application/helpers/general_helper.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1887">
+          <caret line="111" column="45" selection-start-line="111" selection-start-column="45" selection-end-line="111" selection-end-column="45" />
           <folding />
         </state>
       </provider>

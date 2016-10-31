@@ -9,9 +9,6 @@
     <!-- Bootstrap -->
     <link href="<?php echo base_url();?>assets/css/bootstrap.min.css" rel="stylesheet">
 
-    <!-- Select2 -->
-    <link href="<?php echo base_url();?>plugins/select2/css/select2.min.css" rel="stylesheet">
-
     <!-- bootstrap wysihtml5 - text editor -->
     <link rel="stylesheet" href="<?php echo base_url();?>plugins/bootstrap-wysihtml5/bootstrap3-wysihtml5.min.css">
 

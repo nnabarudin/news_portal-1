@@ -249,6 +249,31 @@ class News extends CI_Controller {
         $this->load->view('news_portal/show_articles',$data);
     }
 
+    public function article($article_id){
+        $data = array();
+        $data['article'] = $this->News_model->get_single_article($article_id);
+        //$data['title'] = "Show Articles";
+        $this->load->view('news_portal/article',$data);
+    }
+
+    public function delete_article($article_id){
+
+        //First check if user is logged in
+        if(!is_user_loggedin()){
+            $this->session->sess_destroy();
+        };
+
+        //Check if user has authority to delete this post then delete
+        $user_id = $this->session->user_id;
+        if ($this->News_model->delete_article($user_id,$article_id)){
+            $this->session->set_flashdata('message', 'Article deleted successfully');
+        }
+        else{
+            $this->session->set_flashdata('error', 'Delete operation not successfull');
+        }
+        redirect('news/show_articles');
+    }
+
 
 
 

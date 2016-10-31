@@ -110,6 +110,7 @@ class News_model extends CI_Model {
     public function get_articles($id){
         $this->db->from('news');
         $this->db->where('published_by',$id);
+        $this->db->order_by("created_dtm", "desc"); //Chronological order
         $articles = $this->db->get();
 
         return $articles ;
@@ -123,6 +124,56 @@ class News_model extends CI_Model {
         $username = $this->db->get()->result();
 
         return $username = $username[0];
+    }
+
+    public function get_single_article($article_id){
+        //$this->db->select('full_name');
+        $this->db->where("id",$article_id);
+        $this->db->from('news');
+        $this->db->limit(1);
+        $article = $this->db->get()->result();
+
+        return $article = $article[0];
+    }
+
+    public function delete_article($user_id,$article_id){
+
+        $this->db->trans_start();
+
+        //Check if user is authorized to delete this id
+        $this->db->where('published_by', $user_id);
+        $this->db->where('id', $article_id);
+
+        //Get image location
+        $this->db->select('image');
+        $image = $this->db->get('news');
+        $image = $image->result()[0]->image;
+        $image_location = "uploads/".$image;
+        //unset($image);
+
+        $this->db->where('published_by', $user_id);
+        $this->db->where('id', $article_id);
+        $this->db->delete('news');
+
+        //Check if file exists
+        if (file_exists($image_location)){
+            if(unlink($image_location)){
+                $this->db->trans_complete(); //end of transaction
+                return true;
+            }else{
+                return false;
+            }
+
+        }else{
+            $this->db->trans_complete(); //end of transaction
+            return true;
+            echo "FILE DOES NOT EXIST";exit;
+
+        }
+
+
+
+
     }
 
 }

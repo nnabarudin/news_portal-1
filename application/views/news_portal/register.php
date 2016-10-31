@@ -30,7 +30,7 @@
                     }
                     ?>
 
-                    <?php echo form_open('',array('name' => 'register_user','id' => 'register_user')); ?>
+                    <?php echo form_open('',array('name' => 'register','id' => 'register','data-toggle' => "validator")); ?>
                     <div class="form-group">
                         <label>Full Name</label>
                         <input type="text" class="form-control" id="name" name="name" placeholder="Enter Full Name" required>
@@ -51,4 +51,9 @@
     </div>
 </div>
 
+<!-- Bootstrap Validator -->
+<script src="<?php echo base_url();?>plugins/bootstrap-validator/validator.min.js"></script>
+<script>
+    $('#register').validator()
+</script>
 <?php include(VIEWPATH."_footer.php") ?>

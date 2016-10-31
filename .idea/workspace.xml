@@ -2,15 +2,11 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="1145e9b0-f6d6-4ec3-812d-5716a00bd733" name="Default" comment="">
-      <change type="DELETED" beforePath="$PROJECT_DIR$/uploads/baacf5cfb5db6a6025a8a9db3471fd81.jpg" afterPath="" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/application/controllers/News.php" afterPath="$PROJECT_DIR$/application/controllers/News.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/application/models/news_model.php" afterPath="$PROJECT_DIR$/application/models/news_model.php" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/application/views/_footer.php" afterPath="$PROJECT_DIR$/application/views/_footer.php" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/application/views/_header.php" afterPath="$PROJECT_DIR$/application/views/_header.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/application/views/navbar.php" afterPath="$PROJECT_DIR$/application/views/navbar.php" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/application/views/news_portal/login.php" afterPath="$PROJECT_DIR$/application/views/news_portal/login.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/application/views/news_portal/news_stand.php" afterPath="$PROJECT_DIR$/application/views/news_portal/news_stand.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/application/views/news_portal/publish_article.php" afterPath="$PROJECT_DIR$/application/views/news_portal/publish_article.php" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/application/views/news_portal/register.php" afterPath="$PROJECT_DIR$/application/views/news_portal/register.php" />
     </list>
     <ignored path="news_portal.iws" />
@@ -35,61 +31,41 @@
       <file leaf-file-name="News.php" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/application/controllers/News.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="444">
-              <caret line="237" column="33" selection-start-line="237" selection-start-column="20" selection-end-line="237" selection-end-column="33" />
+            <state relative-caret-position="1462">
+              <caret line="86" column="70" selection-start-line="86" selection-start-column="64" selection-end-line="86" selection-end-column="70" />
               <folding>
-                <element signature="n#login#0;n#News#0;n#!!top" expanded="false" />
-                <element signature="n#register_user#0;n#News#0;n#!!top" expanded="false" />
-                <element signature="n#send_mail#0;n#News#0;n#!!top" expanded="false" />
-                <element signature="n#verify#0;n#News#0;n#!!top" expanded="false" />
-                <element signature="n#logout#0;n#News#0;n#!!top" expanded="false" />
                 <element signature="n#publish_article#0;n#News#0;n#!!top" expanded="false" />
-                <element signature="n#show_articles#0;n#News#0;n#!!top" expanded="false" />
-                <element signature="n#article#0;n#News#0;n#!!top" expanded="false" />
-                <element signature="n#news_stand#0;n#News#0;n#!!top" expanded="false" />
-                <element signature="n#rss#0;n#News#0;n#!!top" expanded="false" />
-                <marker date="1477929148215" expanded="true" signature="3300:3475" ph="..." />
-                <marker date="1477929148215" expanded="false" signature="9593:10162" ph="..." />
+                <marker date="1477933783583" expanded="true" signature="3374:3549" ph="..." />
               </folding>
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="register.php" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/application/views/news_portal/register.php">
+      <file leaf-file-name="News_model.php" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/application/models/News_model.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="51">
-              <caret line="3" column="44" selection-start-line="3" selection-start-column="44" selection-end-line="3" selection-end-column="44" />
+            <state relative-caret-position="255">
+              <caret line="18" column="22" selection-start-line="18" selection-start-column="22" selection-end-line="18" selection-end-column="22" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="navbar.php" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/application/views/navbar.php">
+      <file leaf-file-name="publish_article.php" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/application/views/news_portal/publish_article.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="136">
-              <caret line="8" column="0" selection-start-line="8" selection-start-column="0" selection-end-line="8" selection-end-column="0" />
+            <state relative-caret-position="561">
+              <caret line="33" column="108" selection-start-line="33" selection-start-column="108" selection-end-line="33" selection-end-column="108" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="_header.php" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/application/views/_header.php">
+      <file leaf-file-name="login.php" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/application/views/news_portal/login.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="442">
-              <caret line="26" column="23" selection-start-line="26" selection-start-column="23" selection-end-line="26" selection-end-column="23" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="_footer.php" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/application/views/_footer.php">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="272">
-              <caret line="16" column="37" selection-start-line="16" selection-start-column="37" selection-end-line="16" selection-end-column="37" />
+            <state relative-caret-position="337">
+              <caret line="32" column="112" selection-start-line="32" selection-start-column="84" selection-end-line="32" selection-end-column="112" />
               <folding />
             </state>
           </provider>
@@ -121,18 +97,18 @@
         <option value="$PROJECT_DIR$/application/views/news_portal/show_articles.php" />
         <option value="$PROJECT_DIR$/application/libraries/My_dompdf.php" />
         <option value="$PROJECT_DIR$/application/helpers/pdf_helper.php" />
-        <option value="$PROJECT_DIR$/application/views/news_portal/publish_article.php" />
         <option value="$PROJECT_DIR$/application/views/news_portal/article.php" />
         <option value="$PROJECT_DIR$/application/views/news_portal/rss_feed.php" />
         <option value="$PROJECT_DIR$/application/views/news_portal/rss.php" />
-        <option value="$PROJECT_DIR$/application/models/News_model.php" />
-        <option value="$PROJECT_DIR$/application/controllers/News.php" />
         <option value="$PROJECT_DIR$/application/views/news_portal/news_stand.php" />
-        <option value="$PROJECT_DIR$/application/views/news_portal/login.php" />
-        <option value="$PROJECT_DIR$/application/views/news_portal/register.php" />
-        <option value="$PROJECT_DIR$/application/views/_footer.php" />
-        <option value="$PROJECT_DIR$/application/views/_header.php" />
         <option value="$PROJECT_DIR$/application/views/navbar.php" />
+        <option value="$PROJECT_DIR$/application/views/_header.php" />
+        <option value="$PROJECT_DIR$/application/views/_footer.php" />
+        <option value="$PROJECT_DIR$/application/controllers/News.php" />
+        <option value="$PROJECT_DIR$/application/views/news_portal/register.php" />
+        <option value="$PROJECT_DIR$/application/views/news_portal/login.php" />
+        <option value="$PROJECT_DIR$/application/models/News_model.php" />
+        <option value="$PROJECT_DIR$/application/views/news_portal/publish_article.php" />
       </list>
     </option>
   </component>
@@ -412,15 +388,15 @@
       <workItem from="1477764795110" duration="4088000" />
       <workItem from="1477813083715" duration="29551000" />
       <workItem from="1477893860016" duration="83000" />
-      <workItem from="1477894073224" duration="25208000" />
+      <workItem from="1477894073224" duration="27479000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="60638000" />
+    <option name="totallyTimeSpent" value="62909000" />
   </component>
   <component name="ToolWindowManager">
-    <frame x="-8" y="-8" width="1296" height="1000" extended-state="7" />
+    <frame x="-8" y="-8" width="1296" height="1000" extended-state="6" />
     <editor active="true" />
     <layout>
       <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.21521036" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
@@ -451,10 +427,10 @@
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
       <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.25809062" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.21521036" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
       <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3298731" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
@@ -474,7 +450,7 @@
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
-      <option name="time" value="7" />
+      <option name="time" value="10" />
     </breakpoint-manager>
     <watches-manager />
   </component>
@@ -484,18 +460,8 @@
         <state relative-caret-position="2193">
           <caret line="129" column="32" selection-start-line="129" selection-start-column="32" selection-end-line="129" selection-end-column="32" />
           <folding>
-            <element signature="n#login#0;n#News#0;n#!!top" expanded="false" />
-            <element signature="n#register_user#0;n#News#0;n#!!top" expanded="false" />
-            <element signature="n#send_mail#0;n#News#0;n#!!top" expanded="false" />
-            <element signature="n#verify#0;n#News#0;n#!!top" expanded="false" />
-            <element signature="n#logout#0;n#News#0;n#!!top" expanded="false" />
             <element signature="n#publish_article#0;n#News#0;n#!!top" expanded="false" />
-            <element signature="n#show_articles#0;n#News#0;n#!!top" expanded="false" />
-            <element signature="n#article#0;n#News#0;n#!!top" expanded="false" />
-            <element signature="n#news_stand#0;n#News#0;n#!!top" expanded="false" />
-            <element signature="n#rss#0;n#News#0;n#!!top" expanded="false" />
-            <marker date="1477929148215" expanded="true" signature="3300:3475" ph="..." />
-            <marker date="1477929148215" expanded="false" signature="9593:10162" ph="..." />
+            <marker date="1477933783583" expanded="true" signature="3374:3549" ph="..." />
           </folding>
         </state>
       </provider>
@@ -512,12 +478,7 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="425">
           <caret line="114" column="24" selection-start-line="114" selection-start-column="24" selection-end-line="114" selection-end-column="24" />
-          <folding>
-            <element signature="n#verify_user#0;n#News_model#0;n#!!top" expanded="false" />
-            <element signature="n#publish_article#0;n#News_model#0;n#!!top" expanded="false" />
-            <element signature="n#get_single_article#0;n#News_model#0;n#!!top" expanded="false" />
-            <element signature="n#delete_article#0;n#News_model#0;n#!!top" expanded="false" />
-          </folding>
+          <folding />
         </state>
       </provider>
     </entry>
@@ -555,18 +516,8 @@
         <state relative-caret-position="0">
           <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
           <folding>
-            <element signature="n#login#0;n#News#0;n#!!top" expanded="false" />
-            <element signature="n#register_user#0;n#News#0;n#!!top" expanded="false" />
-            <element signature="n#send_mail#0;n#News#0;n#!!top" expanded="false" />
-            <element signature="n#verify#0;n#News#0;n#!!top" expanded="false" />
-            <element signature="n#logout#0;n#News#0;n#!!top" expanded="false" />
             <element signature="n#publish_article#0;n#News#0;n#!!top" expanded="false" />
-            <element signature="n#show_articles#0;n#News#0;n#!!top" expanded="false" />
-            <element signature="n#article#0;n#News#0;n#!!top" expanded="false" />
-            <element signature="n#news_stand#0;n#News#0;n#!!top" expanded="false" />
-            <element signature="n#rss#0;n#News#0;n#!!top" expanded="false" />
-            <marker date="1477929148215" expanded="true" signature="3300:3475" ph="..." />
-            <marker date="1477929148215" expanded="false" signature="9593:10162" ph="..." />
+            <marker date="1477933783583" expanded="true" signature="3374:3549" ph="..." />
           </folding>
         </state>
       </provider>
@@ -575,12 +526,7 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="425">
           <caret line="114" column="24" selection-start-line="114" selection-start-column="24" selection-end-line="114" selection-end-column="24" />
-          <folding>
-            <element signature="n#verify_user#0;n#News_model#0;n#!!top" expanded="false" />
-            <element signature="n#publish_article#0;n#News_model#0;n#!!top" expanded="false" />
-            <element signature="n#get_single_article#0;n#News_model#0;n#!!top" expanded="false" />
-            <element signature="n#delete_article#0;n#News_model#0;n#!!top" expanded="false" />
-          </folding>
+          <folding />
         </state>
       </provider>
     </entry>
@@ -618,18 +564,8 @@
         <state relative-caret-position="0">
           <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
           <folding>
-            <element signature="n#login#0;n#News#0;n#!!top" expanded="false" />
-            <element signature="n#register_user#0;n#News#0;n#!!top" expanded="false" />
-            <element signature="n#send_mail#0;n#News#0;n#!!top" expanded="false" />
-            <element signature="n#verify#0;n#News#0;n#!!top" expanded="false" />
-            <element signature="n#logout#0;n#News#0;n#!!top" expanded="false" />
             <element signature="n#publish_article#0;n#News#0;n#!!top" expanded="false" />
-            <element signature="n#show_articles#0;n#News#0;n#!!top" expanded="false" />
-            <element signature="n#article#0;n#News#0;n#!!top" expanded="false" />
-            <element signature="n#news_stand#0;n#News#0;n#!!top" expanded="false" />
-            <element signature="n#rss#0;n#News#0;n#!!top" expanded="false" />
-            <marker date="1477929148215" expanded="true" signature="3300:3475" ph="..." />
-            <marker date="1477929148215" expanded="false" signature="9593:10162" ph="..." />
+            <marker date="1477933783583" expanded="true" signature="3374:3549" ph="..." />
           </folding>
         </state>
       </provider>
@@ -638,12 +574,7 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="136">
           <caret line="8" column="33" selection-start-line="8" selection-start-column="33" selection-end-line="8" selection-end-column="33" />
-          <folding>
-            <element signature="n#verify_user#0;n#News_model#0;n#!!top" expanded="false" />
-            <element signature="n#publish_article#0;n#News_model#0;n#!!top" expanded="false" />
-            <element signature="n#get_single_article#0;n#News_model#0;n#!!top" expanded="false" />
-            <element signature="n#delete_article#0;n#News_model#0;n#!!top" expanded="false" />
-          </folding>
+          <folding />
         </state>
       </provider>
     </entry>
@@ -667,18 +598,8 @@
         <state relative-caret-position="221">
           <caret line="13" column="0" selection-start-line="13" selection-start-column="0" selection-end-line="13" selection-end-column="0" />
           <folding>
-            <element signature="n#login#0;n#News#0;n#!!top" expanded="false" />
-            <element signature="n#register_user#0;n#News#0;n#!!top" expanded="false" />
-            <element signature="n#send_mail#0;n#News#0;n#!!top" expanded="false" />
-            <element signature="n#verify#0;n#News#0;n#!!top" expanded="false" />
-            <element signature="n#logout#0;n#News#0;n#!!top" expanded="false" />
             <element signature="n#publish_article#0;n#News#0;n#!!top" expanded="false" />
-            <element signature="n#show_articles#0;n#News#0;n#!!top" expanded="false" />
-            <element signature="n#article#0;n#News#0;n#!!top" expanded="false" />
-            <element signature="n#news_stand#0;n#News#0;n#!!top" expanded="false" />
-            <element signature="n#rss#0;n#News#0;n#!!top" expanded="false" />
-            <marker date="1477929148215" expanded="true" signature="3300:3475" ph="..." />
-            <marker date="1477929148215" expanded="false" signature="9593:10162" ph="..." />
+            <marker date="1477933783583" expanded="true" signature="3374:3549" ph="..." />
           </folding>
         </state>
       </provider>
@@ -850,14 +771,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/application/views/news_portal/publish_article.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="677">
-          <caret line="62" column="0" selection-start-line="62" selection-start-column="0" selection-end-line="62" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/application/views/news_portal/article.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="119">
@@ -874,19 +787,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/application/models/News_model.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="609">
-          <caret line="175" column="29" selection-start-line="175" selection-start-column="29" selection-end-line="175" selection-end-column="29" />
-          <folding>
-            <element signature="n#verify_user#0;n#News_model#0;n#!!top" expanded="false" />
-            <element signature="n#publish_article#0;n#News_model#0;n#!!top" expanded="false" />
-            <element signature="n#get_single_article#0;n#News_model#0;n#!!top" expanded="false" />
-            <element signature="n#delete_article#0;n#News_model#0;n#!!top" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/application/views/news_portal/news_stand.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="561">
@@ -895,59 +795,19 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/application/views/news_portal/login.php">
+    <entry file="file://$PROJECT_DIR$/application/views/_header.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="459">
-          <caret line="33" column="0" selection-start-line="33" selection-start-column="0" selection-end-line="33" selection-end-column="0" />
-          <folding>
-            <element signature="n#style#0;n#div#0;n#div#1;n#div#0;n#div#0;n#div#0;n#div#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#div#1;n#div#1;n#div#0;n#div#0;n#div#0;n#div#0;n#!!top" expanded="true" />
-          </folding>
+        <state relative-caret-position="323">
+          <caret line="19" column="0" selection-start-line="19" selection-start-column="0" selection-end-line="19" selection-end-column="0" />
+          <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/application/views/_footer.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="272">
-          <caret line="16" column="37" selection-start-line="16" selection-start-column="37" selection-end-line="16" selection-end-column="37" />
+        <state relative-caret-position="102">
+          <caret line="6" column="0" selection-start-line="6" selection-start-column="0" selection-end-line="6" selection-end-column="0" />
           <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/application/views/_header.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="442">
-          <caret line="26" column="23" selection-start-line="26" selection-start-column="23" selection-end-line="26" selection-end-column="23" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/application/views/news_portal/register.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="51">
-          <caret line="3" column="44" selection-start-line="3" selection-start-column="44" selection-end-line="3" selection-end-column="44" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/application/controllers/News.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="444">
-          <caret line="237" column="33" selection-start-line="237" selection-start-column="20" selection-end-line="237" selection-end-column="33" />
-          <folding>
-            <element signature="n#login#0;n#News#0;n#!!top" expanded="false" />
-            <element signature="n#register_user#0;n#News#0;n#!!top" expanded="false" />
-            <element signature="n#send_mail#0;n#News#0;n#!!top" expanded="false" />
-            <element signature="n#verify#0;n#News#0;n#!!top" expanded="false" />
-            <element signature="n#logout#0;n#News#0;n#!!top" expanded="false" />
-            <element signature="n#publish_article#0;n#News#0;n#!!top" expanded="false" />
-            <element signature="n#show_articles#0;n#News#0;n#!!top" expanded="false" />
-            <element signature="n#article#0;n#News#0;n#!!top" expanded="false" />
-            <element signature="n#news_stand#0;n#News#0;n#!!top" expanded="false" />
-            <element signature="n#rss#0;n#News#0;n#!!top" expanded="false" />
-            <marker date="1477929148215" expanded="true" signature="3300:3475" ph="..." />
-            <marker date="1477929148215" expanded="false" signature="9593:10162" ph="..." />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -955,6 +815,51 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="136">
           <caret line="8" column="0" selection-start-line="8" selection-start-column="0" selection-end-line="8" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/application/views/news_portal/register.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="252">
+          <caret line="32" column="118" selection-start-line="32" selection-start-column="89" selection-end-line="32" selection-end-column="118" />
+          <folding>
+            <marker date="1477933783642" expanded="true" signature="2517:2524" ph="..." />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/application/controllers/News.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1462">
+          <caret line="86" column="70" selection-start-line="86" selection-start-column="64" selection-end-line="86" selection-end-column="70" />
+          <folding>
+            <element signature="n#publish_article#0;n#News#0;n#!!top" expanded="false" />
+            <marker date="1477933783583" expanded="true" signature="3374:3549" ph="..." />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/application/models/News_model.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="255">
+          <caret line="18" column="22" selection-start-line="18" selection-start-column="22" selection-end-line="18" selection-end-column="22" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/application/views/news_portal/login.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="337">
+          <caret line="32" column="112" selection-start-line="32" selection-start-column="84" selection-end-line="32" selection-end-column="112" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/application/views/news_portal/publish_article.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="561">
+          <caret line="33" column="108" selection-start-line="33" selection-start-column="108" selection-end-line="33" selection-end-column="108" />
           <folding />
         </state>
       </provider>

@@ -18,9 +18,6 @@
     <!-- Sweet Alert -->
     <link rel="stylesheet" href="<?php echo base_url();?>plugins/sweet-alert/sweetalert.css">
 
-    <!-- Pace Page -->
-    <link rel="stylesheet" href="<?php echo base_url();?>plugins/pace/pace.min.css">
-
     <!-- Font Awesome -->
     <link rel="stylesheet" href="<?php echo base_url();?>plugins/font-awesome/css/font-awesome.min.css">
 

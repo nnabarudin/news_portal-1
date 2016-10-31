@@ -31,7 +31,7 @@
                     }
                     ?>
 
-                    <?php echo form_open_multipart('',array('name' => 'publish_news','id' => 'publish_news')); ?>
+                    <?php echo form_open_multipart('',array('name' => 'publish_news','id' => 'publish_news','data-toggle' => "validator")); ?>
 
                     <div class="form-group">
                         <label>Title</label>
@@ -60,5 +60,18 @@
 
     </div>
 </div>
+<!-- Bootstrap WYSIHTML5 -->
+<script src="<?php echo base_url();?>plugins/bootstrap-wysihtml5/bootstrap3-wysihtml5.all.min.js"></script>
 
+<script>
+    $(document).ready(function() {
+        $('#news-textarea').wysihtml5();
+    } );
+</script>
+
+<!-- Bootstrap Validator -->
+<script src="<?php echo base_url();?>plugins/bootstrap-validator/validator.min.js"></script>
+<script>
+    $('#publish_news').validator()
+</script>
 <?php include(VIEWPATH."_footer.php") ?>

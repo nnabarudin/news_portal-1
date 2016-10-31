@@ -30,7 +30,7 @@
                     }
                     ?>
 
-                    <?php echo form_open('',array('name' => 'login','id' => 'login')); ?>
+                    <?php echo form_open('',array('name' => 'login','id' => 'login','data-toggle' => "validator")); ?>
                     <div class="form-group">
                         <label>Email</label>
                         <input type="email" class="form-control" id="email" name="email" placeholder="Enter Email" required>
@@ -50,5 +50,9 @@
 
     </div>
 </div>
-
+<!-- Bootstrap Validator -->
+<script src="<?php echo base_url();?>plugins/bootstrap-validator/validator.min.js"></script>
+<script>
+    $('#login').validator()
+</script>
 <?php include(VIEWPATH."_footer.php") ?>

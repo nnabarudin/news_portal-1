@@ -6,10 +6,20 @@ class News_model extends CI_Model {
         parent::__construct();
     }
 
+    /**
+     *
+     * @param $db_data
+     * @return mixed
+     */
     public function auth_user($db_data){
         return $this->db->get_where('users',$db_data,1);
     }
 
+    /**
+     * Register a user
+     * @param $data
+     * @return array
+     */
     public function register_user($data){
 
         $this->db->trans_start();
@@ -39,40 +49,15 @@ class News_model extends CI_Model {
 
     }
 
-    public function verify_user($id,$key){
-        //Check if id with key exists in confirm database
-        $this->db->from('confirm');
-        $this->db->where('user_id', $id);
-        $this->db->where('key', $key);
-        $this->db->limit(1);
-        $query = $this->db->get();
-        if ($query->num_rows() >= 1){
 
-            //User with id and key found
-            $this->db->trans_start();
-
-            //Set user as active
-            $is_active = '1';
-            $update = array (
-                'is_active'  => $is_active
-            );
-            $this->db->where('id', $id);
-            $this->db->update("users",$update);
-
-            //Also delete entry from confirm table
-            $this->db->where('user_id', $id);
-            $this->db->delete('confirm');
-
-            $this->db->trans_complete();
-
-        }
-        else{
-
-        }
-
-    }
-
-    public function set_password($id,$password,$key){
+    /**
+     * Verify a user an sets password
+     * @param $id
+     * @param $password
+     * @param $key
+     * @return bool
+     */
+    public function set_password($id, $password, $key){
 
         //Check if id with key exists in confirm database
         $this->db->from('confirm');
@@ -102,11 +87,21 @@ class News_model extends CI_Model {
         return true;
     }
 
+    /**
+     * Publish an article
+     * @param $db_data
+     * @return bool
+     */
     public function publish_article($db_data){
         $this->db->insert("news",$db_data);
         return true;
     }
 
+    /**
+     * Get articles published by a user
+     * @param $id
+     * @return mixed
+     */
     public function get_articles($id){
         $this->db->from('news');
         $this->db->where('published_by',$id);
@@ -116,6 +111,11 @@ class News_model extends CI_Model {
         return $articles ;
     }
 
+    /**
+     * Takes user id and returns its email and name
+     * @param $id
+     * @return mixed
+     */
     public function get_userdata($id){
         //$this->db->select('full_name','email');
         $this->db->where("id",$id);
@@ -126,6 +126,11 @@ class News_model extends CI_Model {
         return $userdata = $userdata[0];
     }
 
+    /**
+     * Return a single article with article_id
+     * @param $article_id
+     * @return mixed
+     */
     public function get_single_article($article_id){
         //$this->db->select('full_name');
         $this->db->where("id",$article_id);
@@ -136,7 +141,15 @@ class News_model extends CI_Model {
         return $article = $article[0];
     }
 
-    public function delete_article($user_id,$article_id){
+    /**
+     * Checks if user has authority to delete this post
+     * Delete the post
+     * Delete the image file also
+     * @param $user_id
+     * @param $article_id
+     * @return bool
+     */
+    public function delete_article($user_id, $article_id){
 
         $this->db->trans_start();
 
@@ -170,6 +183,10 @@ class News_model extends CI_Model {
         }
     }
 
+    /**
+     * Get 10 news articles from database in Chronological order
+     * @return mixed
+     */
     public function get_all_articles(){
         $this->db->from('news');
         $this->db->order_by("created_dtm", "desc"); //Chronological order

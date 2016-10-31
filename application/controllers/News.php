@@ -17,9 +17,10 @@ class News extends CI_Controller {
         $this->news_stand();
     }
 
+    /**
+     *User login page
+     */
     public function login(){
-
-
         //Check if form is submitted
         if ($_SERVER["REQUEST_METHOD"] == "POST") {
             //Form validation
@@ -45,18 +46,19 @@ class News extends CI_Controller {
             redirect('news/login');
         }
 
-
         //Show login form
         $data = array();
         $data['title'] = 'Login';
         $this->load->view('news_portal/login');
     }
 
+    /**
+     *User registration
+     */
     public function register_user(){
 
         //Check if form is submitted
         if ($_SERVER["REQUEST_METHOD"] == "POST") {
-
             //Form validation
             $this->form_validation->set_rules('name', 'Name', 'required|alpha_numeric_spaces');
             $this->form_validation->set_rules('email', 'email', 'required|valid_email|is_unique[users.email]|max_length[150]'
@@ -89,7 +91,6 @@ class News extends CI_Controller {
                     ";
                 }
 
-
                 if ($this->send_mail($email,$message,$subject))
                 {
                     $this->session->set_flashdata('message', 'An email has been sent to your account.Please login your email to confirm your account');
@@ -104,8 +105,6 @@ class News extends CI_Controller {
                 $this->session->set_flashdata('error', validation_errors());
                 redirect('news/register_user');
             }
-
-
         }
 
         //Show register form
@@ -114,7 +113,15 @@ class News extends CI_Controller {
         $this->load->view('news_portal/register',$data);
     }
 
-    public function send_mail($email,$message,$subject) {
+    /**
+     * Email sending function,uses PHP mailer as library
+     * Load configuration from application/config/php_mailer.php
+     * @param $email
+     * @param $message
+     * @param $subject
+     * @return bool
+     */
+    public function send_mail($email, $message, $subject) {
         $this->load->library('My_PHPMailer');
         $this->config->load('php_mailer');
         $mail = new PHPMailer();
@@ -127,10 +134,8 @@ class News extends CI_Controller {
         $mail->Username   = $this->config->item('username');
         $mail->Password   = $this->config->item('password');;
         $mail->SetFrom('mail@Newsportal.com', 'News Portal');  //Who is sending the email
-
         $mail->Subject    = $subject;
         $mail->Body      = $message;
-
         $mail->addAddress($email);     // Add a recipient
 
         if(!$mail->Send()) {
@@ -140,8 +145,13 @@ class News extends CI_Controller {
         }
     }
 
-    public function verify($id,$key){
 
+    /**
+     * Function to verify users from Email
+     * @param $id
+     * @param $key
+     */
+    public function verify($id, $key){
         if (!is_null($id) && is_numeric($id) && !is_null($key)){
             $data = array();
             $data['title'] = "Set Password";
@@ -166,8 +176,6 @@ class News extends CI_Controller {
                         $this->session->set_userdata('user_id',$id);
                         redirect('');
                     }
-
-
                 }
                 else{
                     $this->session->set_flashdata('error', validation_errors());
@@ -175,24 +183,28 @@ class News extends CI_Controller {
                 }
             }
         }
-
     }
 
+    /**
+     *Function to logout a user
+     */
     public function logout(){
         $this->session->sess_destroy();
         redirect("");
     }
 
+    /**
+     *User can publish an article
+     */
     public function publish_article(){
         if(!is_user_loggedin()){
-            $this->session->sess_destroy();
+            $this->logout();
         };
 
         //Check if form is submitted
         if ($_SERVER["REQUEST_METHOD"] == "POST") {
             //Form validation
             $this->form_validation->set_rules('title', 'Title', 'required');
-
 
             if ($this->form_validation->run() != FALSE){
                 $db_data = array();
@@ -209,7 +221,6 @@ class News extends CI_Controller {
                 $config['encrypt_name']         = TRUE;
 
                 $this->load->library('upload', $config);
-
 
                 if ( ! $this->upload->do_upload('fileToUpload')){
                     $this->session->set_flashdata('error', 'Error Uploading file');
@@ -235,20 +246,24 @@ class News extends CI_Controller {
         $this->load->view('news_portal/publish_article',$data);
     }
 
+    /**
+     * Show articles published by users
+     */
     public function show_articles(){
         if(!is_user_loggedin()){
-            $this->session->sess_destroy();
+            $this->logout();
         };
         $data = array();
         $data['title'] = "Show Articles";
         $data['articles'] = $this->News_model->get_articles($this->session->user_id);
 
-
         $this->load->view('news_portal/show_articles',$data);
-
-
     }
 
+    /**
+     * Show a single article with article_id
+     * @param $article_id
+     */
     public function article($article_id){
         $data = array();
         $data['article'] = $this->News_model->get_single_article($article_id);
@@ -256,11 +271,17 @@ class News extends CI_Controller {
         $this->load->view('news_portal/article',$data);
     }
 
+    /**
+     * Delete an article published by user,
+     * This functions checks first if user has authority to delete the post
+     * then deletes it and also deletes image associated with the article
+     * @param $article_id
+     */
     public function delete_article($article_id){
-
         //First check if user is logged in
         if(!is_user_loggedin()){
             $this->session->sess_destroy();
+            redirect('');
         };
 
         //Check if user has authority to delete this post then delete
@@ -274,6 +295,9 @@ class News extends CI_Controller {
         redirect('news/show_articles');
     }
 
+    /**
+     *News stand will show latest 10 news in chronological order
+     */
     public function news_stand(){
         $data = array();
         $data['title'] = "Home";
@@ -281,6 +305,9 @@ class News extends CI_Controller {
         $this->load->view('news_portal/news_stand',$data);
     }
 
+    /**
+     * RSS feed
+     */
     public function rss(){
         $this->load->helper('xml');
         $data['encoding'] = 'utf-8';

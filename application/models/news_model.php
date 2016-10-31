@@ -116,14 +116,14 @@ class News_model extends CI_Model {
         return $articles ;
     }
 
-    public function get_username($id){
-        $this->db->select('full_name');
+    public function get_userdata($id){
+        //$this->db->select('full_name','email');
         $this->db->where("id",$id);
         $this->db->from('users');
         $this->db->limit(1);
-        $username = $this->db->get()->result();
+        $userdata = $this->db->get()->result();
 
-        return $username = $username[0];
+        return $userdata = $userdata[0];
     }
 
     public function get_single_article($article_id){
@@ -168,6 +168,13 @@ class News_model extends CI_Model {
             $this->db->trans_complete(); //end of transaction
             return true;
         }
+    }
+
+    public function get_all_articles(){
+        $this->db->from('news');
+        $this->db->order_by("created_dtm", "desc"); //Chronological order
+        $articles = $this->db->get();
+        return $articles ;
     }
 
 }

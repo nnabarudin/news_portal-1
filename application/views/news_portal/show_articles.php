@@ -1,9 +1,7 @@
 <?php include(VIEWPATH."_header.php") ?>
 <div class="container-fluid">
     <div class="row">
-        <div class="col-md-6 col-md-offset-3">
-<!--            --><?php //echo $this->pagination->create_links();?>
-        </div>
+
         <div class="col-md-12 " >
 
             <?php if($articles->result_id->num_rows > 0){
@@ -11,7 +9,9 @@
                 foreach($articles->result() as $u){ ?>
                     <div class="col-md-8">
                         <h3><a href="<?php $article_link=base_url().'news/article/'.$u->id;echo $article_link;?>"><?php echo $u->title;?></a></h3>
-                        <p class="help-block">Posted by: <?php echo get_username($u->published_by);?>     &nbsp; <span class="glyphicon glyphicon glyphicon-time" aria-hidden="true"></span> <?php echo time2str($u->created_dtm);?></p>
+                        <p class="help-block">Posted by: <?php echo  get_userdata($this->session->user_id)['name']." - ".get_userdata($this->session->user_id)['email'];?>
+                            <br/>
+                            <span class="glyphicon glyphicon glyphicon-time" aria-hidden="true"></span> <?php echo time2str($u->created_dtm);?></p>
                         <p>
                             <?php
                             if (strlen($u->news_text) > 250){
@@ -36,9 +36,7 @@
             ?>
         </div>
 
-        <div class="col-md-6 col-md-offset-3">
-            <?php echo $this->pagination->create_links();?>
-        </div>
+
 
     </div>
 </div>

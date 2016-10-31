@@ -12,8 +12,19 @@
     <!-- Select2 -->
     <link href="<?php echo base_url();?>plugins/select2/css/select2.min.css" rel="stylesheet">
 
-    <!-- Bootstrap-wysihtml5 -->
-    <link href="<?php echo base_url();?>plugins/bootstrap-wysihtml5/bootstrap-wysihtml5-0.0.2.css" rel="stylesheet">
+    <!-- bootstrap wysihtml5 - text editor -->
+    <link rel="stylesheet" href="<?php echo base_url();?>plugins/bootstrap-wysihtml5/bootstrap3-wysihtml5.min.css">
+
+    <!--KendoUI-->
+    <!--KendoUI-->
+    <link href="<?php echo base_url();?>plugins/kendo-ui/styles/kendo.common.min.css" rel="stylesheet">
+    <link href="<?php echo base_url();?>plugins/kendo-ui/styles/kendo.rtl.min.css" rel="stylesheet">
+    <link href="<?php echo base_url();?>plugins/kendo-ui/styles/kendo.default.min.css" rel="stylesheet">
+    <link href="<?php echo base_url();?>plugins/kendo-ui/styles/kendo.dataviz.min.css" rel="stylesheet">
+    <link href="<?php echo base_url();?>plugins/kendo-ui/styles/kendo.dataviz.default.min.css" rel="stylesheet">
+    <script src="<?php echo base_url();?>plugins/kendo-ui/js/jquery.min.js"></script>
+    <script src="<?php echo base_url();?>plugins/kendo-ui/js/jszip.min.js"></script>
+    <script src="<?php echo base_url();?>plugins/kendo-ui/js/kendo.all.min.js"></script>
 
     <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
     <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->

@@ -106,10 +106,13 @@ function time2str($ts) {
     }
 }
 
-function get_username($id){
+function get_userdata($id){
     $CI =& get_instance();
     $CI->load->model('news_model');
-    $username = $CI->news_model->get_username($id);
+    $username = $CI->news_model->get_userdata($id);
+    $userdata = array();
+    $userdata['name'] = $username->full_name;
+    $userdata['email'] = $username->email;
 
-    return $username->full_name;
+    return $userdata ;
 }

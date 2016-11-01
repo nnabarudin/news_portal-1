@@ -3,15 +3,14 @@
     <div class="row">
 
         <div class="col-md-10 col-md-offset-1">
-            <button class='export-pdf btn btn-primary btn-flat pull-right'><i class="fa fa-file-pdf-o" aria-hidden="true"></i> Download as PDF</button>
-            <br/><br/><br/>
+
         </div>
         <div class="article_pdf">
             <div class="col-md-10 col-md-offset-1">
                 <div class="page-header">
                     <h3><?php echo $article->title;?></h3>
-
                     <p class="help-block">Posted by: <?php echo  get_userdata($article->published_by)['name']." - ".get_userdata($article->published_by)['email'];?>
+                    <button class='export-pdf btn btn-default btn-flat pull-right'><i class="fa fa-file-pdf-o" aria-hidden="true"></i> Download as PDF</button>
                     <br/>
                     <span class="glyphicon glyphicon glyphicon-time" aria-hidden="true"></span> <?php echo $article->created_dtm;?></p>
                 </div>

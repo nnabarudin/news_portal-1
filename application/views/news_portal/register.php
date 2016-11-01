@@ -12,6 +12,12 @@
                     //Show Success or Error messages
                     $message = $this->session->flashdata('message');
                     $error = $this->session->flashdata('error');
+                    if (!empty($message)){ ?>
+                        <script>
+                            swal("Success!", "An email has been sent to your account.Please login your email to confirm your account", "success")
+                        </script>
+                        <?php
+                    }
                     if (isset($message)){ ?>
                         <div style="text-align:center;" class="alert alert-success" role="alert">
                             <span class="glyphicon glyphicon-exclamation-sign"></span>

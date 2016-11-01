@@ -4,6 +4,18 @@
 
         <div class="col-md-12 " >
 
+            <?php
+            //Show Success or Error messages
+            $message = $this->session->flashdata('message');
+            if (!empty($message)){ ?>
+
+                <script>
+                    swal("Success!", "Article Deleted", "success")
+                </script>
+                <?php
+            }
+            ?>
+
             <?php if($articles->result_id->num_rows > 0){
 
                 foreach($articles->result() as $u){ ?>

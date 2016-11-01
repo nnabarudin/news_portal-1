@@ -3,6 +3,13 @@
 
 <!-- SweetAlert -->
 <script src="<?php echo base_url();?>plugins/sweet-alert/sweetalert.min.js"></script>
+<!-- Bootstrap WYSIHTML5 -->
+<script src="<?php echo base_url();?>plugins/bootstrap-wysihtml5/bootstrap3-wysihtml5.all.min.js"></script>
 
+<script>
+    $(document).ready(function() {
+        $('#news-textarea').wysihtml5();
+    } );
+</script>
 </body>
 </html>

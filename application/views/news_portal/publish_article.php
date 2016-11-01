@@ -49,7 +49,7 @@
                         <p class="help-block">Max file size : 2MiB</p>
                     </div>
 
-                    <button type="submit" name="btn_submit"  class="btn btn-primary pull-right">Submit</button>
+                    <button type="submit" name="btn_submit"  class="btn btn-primary pull-right">Publish</button>
                     <?php echo form_close(); ?>
 
                 </div>
@@ -60,14 +60,7 @@
 
     </div>
 </div>
-<!-- Bootstrap WYSIHTML5 -->
-<script src="<?php echo base_url();?>plugins/bootstrap-wysihtml5/bootstrap3-wysihtml5.all.min.js"></script>
 
-<script>
-    $(document).ready(function() {
-        $('#news-textarea').wysihtml5();
-    } );
-</script>
 
 <!-- Bootstrap Validator -->
 <script src="<?php echo base_url();?>plugins/bootstrap-validator/validator.min.js"></script>

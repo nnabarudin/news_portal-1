@@ -109,10 +109,14 @@ function time2str($ts) {
 function get_userdata($id){
     $CI =& get_instance();
     $CI->load->model('news_model');
-    $username = $CI->news_model->get_userdata($id);
-    $userdata = array();
-    $userdata['name'] = $username->full_name;
-    $userdata['email'] = $username->email;
+    if (is_numeric($id) && !is_null($id) && !empty($id)) {
+        $username = $CI->news_model->get_userdata($id);
+        $userdata = array();
+        $userdata['name'] = $username->full_name;
+        $userdata['email'] = $username->email;
+        return $userdata;
+    }else{
+        return false;
+    }
 
-    return $userdata ;
 }

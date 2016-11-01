@@ -93,6 +93,7 @@ class News_model extends CI_Model {
      * @return bool
      */
     public function publish_article($db_data){
+
         $this->db->insert("news",$db_data);
         return true;
     }

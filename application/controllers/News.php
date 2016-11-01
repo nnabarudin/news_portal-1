@@ -21,6 +21,10 @@ class News extends CI_Controller {
      *User login page
      */
     public function login(){
+        //If user is logged in redirect to home
+        if(is_user_loggedin()){
+            redirect('');
+        };
         //Check if form is submitted
         if ($_SERVER["REQUEST_METHOD"] == "POST") {
             //Form validation
@@ -36,7 +40,7 @@ class News extends CI_Controller {
                 if($res->result_id->num_rows == 1){
                     $res = $res->result();
                     $this->session->set_userdata('user_id',$res[0]->id);
-                    redirect("news/register_user");
+                    redirect("");
                 }else{
                     $this->session->set_flashdata('error', 'Invalid Email or Password');
                     redirect('news/login');
@@ -56,7 +60,10 @@ class News extends CI_Controller {
      *User registration
      */
     public function register_user(){
-
+        //If user is logged in redirect to home
+        if(is_user_loggedin()){
+           redirect('');
+        };
         //Check if form is submitted
         if ($_SERVER["REQUEST_METHOD"] == "POST") {
             //Form validation
